@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        Header
+    </header>
+
+    <div class="main">
+        <div class="settings">
+            <input type="color" id="head" name="head" value="#e66465" />
+            <button class="eraser"> Eraser </button>
+            <button class="clear"> Clear </button>
+            <label for="grid-size">Grid Size</label><br />
+            <input type="range" id="grid-size" name="grid-size" list="markers" />
+            <datalist id="markers">
+                <option value="16"></option>
+                <option value="25"></option>
+                <option value="49"></option>
+                <option value="64"></option>
+                <option value="100"></option>
+            </datalist>
+
+        </div>
+        <div class="etch">
+            <div class="etch_area">
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Footer
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
