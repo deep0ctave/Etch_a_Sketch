@@ -19,6 +19,8 @@ for(x=0; x<2500;x++) {
     }
     board.addEventListener("mousedown", () => {
         mouse_flag = true;
+        board.style.backgroundColor = COLOR;
+        console.log("over");
       });
     board.addEventListener("mouseup", () => {
         mouse_flag = false;
