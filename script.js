@@ -8,8 +8,8 @@ const container = document.querySelector(".etch_area");
 for(x=0; x<2500;x++) {
     let board = document.createElement('div');
     board.className = "pixel";
-    board.style.height = (500/50)+"px";
-    board.style.width = (500/50)+"px";
+    board.style.height = (600/50)+"px";
+    board.style.width = (600/50)+"px";
 
     window.onmouseup = () => {                        
         mouse_flag = false;
@@ -30,6 +30,9 @@ for(x=0; x<2500;x++) {
             console.log("over");
         }    
       });
+    board.addEventListener("dragstart", (e) => {
+      e.preventDefault();
+    });  
 
     container.appendChild(board);
 }
