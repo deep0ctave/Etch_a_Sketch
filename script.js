@@ -11,6 +11,19 @@ const color_picker = document.querySelector("#head");
 COLOR = color_picker.value;
 color_picker.addEventListener("input", () => {COLOR = color_picker.value;});
 
+const grid_size_picker = document.querySelector("#grid_size");
+ROWS = grid_size_picker.value;
+COLS = grid_size_picker.value;
+grid_size_picker.addEventListener("input", () => {
+  ROWS = grid_size_picker.value;
+  COLS = grid_size_picker.value;
+  remove_grid();
+  create_grid();
+  grid_size_display.textContent = ROWS + " X " + COLS;
+});
+
+const grid_size_display = document.querySelector(".grid_size_value");
+grid_size_display.textContent = ROWS + " X " + COLS;
 
 window.onmouseup = () => {                        
     MOUSE_FLAG = false;
@@ -79,6 +92,11 @@ function create_grid(){
 function clear_grid(){
     const cells = document.querySelectorAll(".cell");
     Array.from(cells).forEach((e) => {e.style.backgroundColor = "white"; console.log("oops");})
+}
+
+function remove_grid(){
+    const cells = document.querySelectorAll(".cell");
+    Array.from(cells).forEach((e) => {e.remove();})
 }
 
 const clrBtn = document.querySelector(".clear_btn");

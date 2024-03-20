@@ -16,15 +16,8 @@
             <button class="eraser"> Eraser </button>
             <button class="clear_btn"> Clear </button>
             <label for="grid-size">Grid Size</label><br />
-            <input type="range" id="grid-size" name="grid-size" list="markers" />
-            <datalist id="markers">
-                <option value="16"></option>
-                <option value="25"></option>
-                <option value="49"></option>
-                <option value="64"></option>
-                <option value="100"></option>
-            </datalist>
-
+            <input type="range" id="grid_size" value="10" name="grid_size" max="100" min="10" step="10"/>
+            <h3 class="grid_size_value"></h3>
         </div>
         <div class="etch">
             <div class="etch_area">
